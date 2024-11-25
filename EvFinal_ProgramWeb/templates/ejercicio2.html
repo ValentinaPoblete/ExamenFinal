@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Pagina de sesion</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/estiloEjercicio2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inicio de sesion</h1>
+        <form action="/ejercicio2" method="POST">
+            <label for="usuario">Ingresa tu nombre</label>
+            <input type="text" id="usuario" name="usuario" required>
+            <br>
+            <label for="contrasenia">Ingresa tu contraseña</label>
+            <input type="text" id="contrasenia" name="contrasenia" required>
+            <br>
+            <button type="submit">Verificar</button>
+        </form>
+        {% if resultado %}
+        <div class="resultado_usuario">
+            <p>{{resultado}}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
